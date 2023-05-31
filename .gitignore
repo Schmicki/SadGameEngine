@@ -1,0 +1,11 @@
+# visual studio files
+.vs
+.vscode
+*.sln
+
+# make files
+./Makefile
+
+# binary and intermediate folders
+bin
+build
