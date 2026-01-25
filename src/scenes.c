@@ -53,27 +53,27 @@ u8_t scene_light_new(scene_light_t* scene)
 
     /* shaders */
 
-    scene->sphere_shader = gl_pipeline_from_files("../resources/shaders/shaded.vert.glsl",
-        "../resources/shaders/shaded.frag.glsl");
+    scene->sphere_shader = gl_pipeline_from_files("resources/shaders/shaded.vert.glsl",
+        "resources/shaders/shaded.frag.glsl");
 
-    scene->light_shader = gl_pipeline_from_files("../resources/shaders/emissive.vert.glsl",
-        "../resources/shaders/emissive.frag.glsl");
+    scene->light_shader = gl_pipeline_from_files("resources/shaders/emissive.vert.glsl",
+        "resources/shaders/emissive.frag.glsl");
 
-    scene->effect_shader = gl_pipeline_from_files("../resources/shaders/effect.vert.glsl",
-        "../resources/shaders/effect.frag.glsl");
+    scene->effect_shader = gl_pipeline_from_files("resources/shaders/effect.vert.glsl",
+        "resources/shaders/effect.frag.glsl");
 
-    scene->skybox_shader = gl_pipeline_from_files("../resources/shaders/skybox.vert.glsl",
-        "../resources/shaders/skybox.frag.glsl");
+    scene->skybox_shader = gl_pipeline_from_files("resources/shaders/skybox.vert.glsl",
+        "resources/shaders/skybox.frag.glsl");
 
-    scene->texture0 = gl_image_from_file("../resources/icon - 512x512.png");
-    scene->texture1 = gl_image_from_file("../resources/icon - 512x512.png");
+    scene->texture0 = gl_image_from_file("resources/icon - 256x256.png");
+    scene->texture1 = gl_image_from_file("resources/icon - 256x256.png");
     scene->skybox = gl_cubemap_from_files(
-        "../resources/textures/skybox/left.jpg",
-        "../resources/textures/skybox/right.jpg",
-        "../resources/textures/skybox/top.jpg",
-        "../resources/textures/skybox/bottom.jpg",
-        "../resources/textures/skybox/front.jpg",
-        "../resources/textures/skybox/back.jpg");
+        "resources/textures/skybox/left.jpg",
+        "resources/textures/skybox/right.jpg",
+        "resources/textures/skybox/top.jpg",
+        "resources/textures/skybox/bottom.jpg",
+        "resources/textures/skybox/front.jpg",
+        "resources/textures/skybox/back.jpg");
 
     glUseProgram(scene->sphere_shader);
     glUniform1i(glGetUniformLocation(scene->sphere_shader, "material.diffuse"), 0);
@@ -261,8 +261,8 @@ u8_t scene_depth_new(scene_depth_t* scene)
             (flt_t)(rand() % 360), (flt_t)(rand() % 360)));
     }
 
-    scene->shader = gl_pipeline_from_files("../resources/shaders/depth.vert.glsl",
-        "../resources/shaders/depth.frag.glsl");
+    scene->shader = gl_pipeline_from_files("resources/shaders/depth.vert.glsl",
+        "resources/shaders/depth.frag.glsl");
 
     return TRUE;
 }

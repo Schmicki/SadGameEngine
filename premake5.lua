@@ -21,6 +21,9 @@ project (workspaceName)
 
     optimize "On"
 
+    filter "action:vs*"
+        debugdir "$(SolutionDir)"
+
 -- Win64 Settings
     filter { "configurations:WinX64" }
 
