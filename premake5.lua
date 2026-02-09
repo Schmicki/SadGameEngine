@@ -1,7 +1,13 @@
 workspaceName = "SadGameEngine"
 
 workspace (workspaceName)
-    configurations { "WinX64", "PSP" }
+
+    filter { "action:vs*" }
+        configurations { "WinX64"}
+    filter { "action:not vs*" }
+        configurations { "WinX64", "PSP" }
+    filter {}
+    
     cdialect "C99"
 
 project (workspaceName)

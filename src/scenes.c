@@ -144,7 +144,7 @@ void_t scene_light_render(scene_light_t* scene, flt_t time, flt_t delta_time)
 
     /* rendering */
 
-    projection = mat4_perspective_gl(90.0f, 960.0f / 540.0f, -0.2f, 0.0f);
+    projection = mat4_perspective_gl(45.0f, 960.0f / 540.0f, -0.2f, 0.0f);
     view = mat4_view(scene->camera.location, scene->camera.rotation);
 
     /* first pass */
@@ -281,7 +281,7 @@ void_t scene_depth_render(scene_depth_t* scene, flt_t time, flt_t delta_time)
     /* rendering */
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    projection = mat4_perspective_gl(90.0f, 1920.0f / 1080.0f, -0.2f, 0.0f);
+    projection = mat4_perspective_gl(45.0f, 1920.0f / 1080.0f, -0.2f, 0.0f);
     view = mat4_view(scene->camera.location, scene->camera.rotation);
 
     /* render spheres */
