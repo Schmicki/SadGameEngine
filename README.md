@@ -1,4 +1,4 @@
-# SadGameEngine
+# SadGameEngine (Legacy)
 ⚠️ Status: Archived ⚠️ This project was developed for the purpose of learning. It is not actively maintained. A rewrite is planned for the future.
 
 A game engine for old hardware
